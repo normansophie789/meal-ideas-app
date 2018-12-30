@@ -24,3 +24,6 @@ yarn-error.log*
 
 # api key
 /src/api-call-constant.js
+
+#dummy data
+/src/sample.json

@@ -1,3 +1,5 @@
+/* API used in this project : MealDB from https://www.themealdb.com/api.php */
+
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -17,10 +19,26 @@ class App extends Component {
     return (
       <div>
         <Title />
-        <Form handleSubmit={this.retrieveMeals} />
+        <Form handleSubmit={this.getMeals} />
         <Meals meals={this.state.meals}/>
       </div>
     );
+  }
+
+  getMeals = async (e) => {
+    e.preventDefault();
+    const api_call = await fetch("https://www.themealdb.com/api/json/v1/" + Api_Key + "/filter.php?i=chicken%20breast");
+    const response = await api_call.json();
+
+  var list = [];
+    var otherList = [];
+    for (var i in response.meals) {
+      list.push(<MealTile title={response.meals[i].strMeal} image_src={response.meals[i].strMealThumb} />);
+    }
+
+    this.setState({meals: list});
+
+    console.log(response);
   }
 
  
