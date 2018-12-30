@@ -7,8 +7,8 @@ import React from 'react';
 export class Form extends React.Component {
     render() {
         return (
-            <form>
-                <label for="ingredient">Enter Ingredient: </label>
+            <form onSubmit={this.props.handleSubmit}>
+                <p>Enter Ingredient: </p>
                 <input type="text" name="ingredient"></input>
                 <button>Search</button>
             </form>

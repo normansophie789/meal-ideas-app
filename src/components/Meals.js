@@ -9,7 +9,7 @@ export class Meals extends React.Component {
     render() {
         return (
             <div>
-                <MealTile />
+                {this.props.meals}
             </div>
         );
     }
