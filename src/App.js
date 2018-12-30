@@ -17,8 +17,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Title />
-        <Form handleSubmit={this.getMeals} />
+        <div class="header">
+          <Title />
+          <Form handleSubmit={this.getMeals} />
+        </div>
         <Meals meals={this.state.meals}/>
       </div>
     );
