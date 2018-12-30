@@ -1,7 +1,6 @@
 /* API used in this project : MealDB from https://www.themealdb.com/api.php */
 
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Title} from './components/Title';
 import {Form} from './components/Form';
@@ -34,7 +33,6 @@ class App extends Component {
     const response = await api_call.json();
 
     var list = [];
-    var otherList = [];
     for (var i in response.meals) {
       list.push(<MealTile title={response.meals[i].strMeal} image_src={response.meals[i].strMealThumb} />);
     }

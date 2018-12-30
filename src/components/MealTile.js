@@ -8,7 +8,7 @@ export class MealTile extends React.Component {
     render() {
         return (
             <div class="meal_tile">
-                <img src={this.props.image_src} alt="image of recipe" />
+                <img src={this.props.image_src} alt={this.props.title} />
                 <p>{this.props.title}</p>
             </div>
         );
