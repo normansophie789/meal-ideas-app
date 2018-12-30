@@ -8,7 +8,7 @@ export class Form extends React.Component {
     render() {
         return (
             <form onSubmit={this.props.handleSubmit}>
-                <label for="ingredient">Enter Ingredient: </label>
+                <label htmlFor="ingredient">Enter Ingredient: </label>
                 <input type="text" name="ingredient"></input>
                 <button>Search</button>
             </form>
