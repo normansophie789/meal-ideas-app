@@ -11,7 +11,7 @@ import {Api_Key} from './api-call-constant';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {meals: []};
+    this.state = {meals: [], ingredient: undefined};
   }
 
   render() {
@@ -21,7 +21,7 @@ class App extends Component {
           <Title />
           <Form handleSubmit={this.getMeals} />
         </div>
-        <Meals meals={this.state.meals}/>
+        <Meals meals={this.state.meals} ingredient={this.state.ingredient}/>
       </div>
     );
   }
@@ -29,9 +29,10 @@ class App extends Component {
   getMeals = async (e) => {
     e.preventDefault();
 
-    const ingredient = e.target.elements.ingredient.value;
+    const ingredient_param = e.target.elements.ingredient.value;
+    this.setState({ingredient: ingredient_param});
 
-    const api_call = await fetch("https://www.food2fork.com/api/search?key=" + Api_Key+ "&q=" + ingredient + "&page=2");
+    const api_call = await fetch("https://www.food2fork.com/api/search?key=" + Api_Key+ "&q=" + ingredient_param + "&page=2");
     const response = await api_call.json();
 
     var list = [];
