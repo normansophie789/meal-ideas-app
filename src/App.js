@@ -27,10 +27,13 @@ class App extends Component {
 
   getMeals = async (e) => {
     e.preventDefault();
-    const api_call = await fetch("https://www.themealdb.com/api/json/v1/" + Api_Key + "/filter.php?i=chicken%20breast");
+
+    const ingredient = e.target.elements.ingredient.value;
+
+    const api_call = await fetch("https://www.themealdb.com/api/json/v1/" + Api_Key + "/filter.php?i=" + ingredient);
     const response = await api_call.json();
 
-  var list = [];
+    var list = [];
     var otherList = [];
     for (var i in response.meals) {
       list.push(<MealTile title={response.meals[i].strMeal} image_src={response.meals[i].strMealThumb} />);
