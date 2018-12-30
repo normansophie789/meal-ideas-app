@@ -1,4 +1,4 @@
-/* API used in this project : MealDB from https://www.themealdb.com/api.php */
+/* API used in this project : Food2Fork */
 
 import React, { Component } from 'react';
 import './App.css';
@@ -29,12 +29,12 @@ class App extends Component {
 
     const ingredient = e.target.elements.ingredient.value;
 
-    const api_call = await fetch("https://www.themealdb.com/api/json/v1/" + Api_Key + "/filter.php?i=" + ingredient);
+    const api_call = await fetch("https://www.food2fork.com/api/search?key=" + Api_Key+ "&q=" + ingredient + "&page=2");
     const response = await api_call.json();
 
     var list = [];
-    for (var i in response.meals) {
-      list.push(<MealTile title={response.meals[i].strMeal} image_src={response.meals[i].strMealThumb} />);
+    for (var i in response.recipes) {
+      list.push(<MealTile title={response.recipes[i].title} image_src={response.recipes[i].image_url} link={response.recipes[i].source_url} />);
     }
 
     this.setState({meals: list});

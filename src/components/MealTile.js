@@ -8,7 +8,9 @@ export class MealTile extends React.Component {
     render() {
         return (
             <div class="meal_tile">
-                <img src={this.props.image_src} alt={this.props.title} />
+                <a href={this.props.link}>
+                    <img src={this.props.image_src} alt={this.props.title} />
+                </a>
                 <p>{this.props.title}</p>
             </div>
         );
