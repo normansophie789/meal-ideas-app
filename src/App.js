@@ -44,10 +44,6 @@ class App extends Component {
 
     console.log(response);
   }
-
- 
-
-  
 }
 
 export default App;
