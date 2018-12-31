@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/meal-ideas-app/precache-manifest.1369699ee692f2a78f8c974869e85b0e.js"
+  "/meal-ideas-app/precache-manifest.8a7cd587f5615c11e085612a9977c056.js"
 );
 
 workbox.clientsClaim();

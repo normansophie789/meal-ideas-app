@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/meal-ideas-app/static/js/runtime~main.58e353e9.js"
   },
   {
-    "revision": "1d5381e5bb236ac0c3d8",
-    "url": "/meal-ideas-app/static/js/main.1d5381e5.chunk.js"
+    "revision": "c607e2c4082981d8326b",
+    "url": "/meal-ideas-app/static/js/main.c607e2c4.chunk.js"
   },
   {
     "revision": "1d777166e58f14ec03a9",
     "url": "/meal-ideas-app/static/js/1.1d777166.chunk.js"
   },
   {
-    "revision": "1d5381e5bb236ac0c3d8",
-    "url": "/meal-ideas-app/static/css/main.56b84117.chunk.css"
+    "revision": "c607e2c4082981d8326b",
+    "url": "/meal-ideas-app/static/css/main.59cb715e.chunk.css"
   },
   {
-    "revision": "fc3a0024c8f6adc3571ea5863dc89742",
+    "revision": "ff37d8c02a1a65eacbff44c597f02e38",
     "url": "/meal-ideas-app/index.html"
   }
 ];
